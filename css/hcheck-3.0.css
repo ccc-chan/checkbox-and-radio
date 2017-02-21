@@ -1,0 +1,78 @@
+/*
+  hcheck - Plugin
+  -----------------------------------------------
+  @author   hwm
+  @created  2017/01/01
+  @version  3.0
+  @site     http://www.tailea.com
+*/
+.cb-five { position: relative; height: 24px; line-height: 24px; vertical-align: middle; font-size: 0; padding: 0; margin: 0; font-family: 'Microsoft yahei', sans-serif; }
+.cb-five label input { margin: 0; padding: 0; }
+
+/*复选*/
+.cb-five label { position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 24px; line-height: 24px; color: #595c5f; }
+.cb-five input[type="checkbox"] { width: 24px; height: 24px; visibility: hidden; display: inline-block; vertical-align: middle; }
+.cb-five input[type="checkbox"] + span { display: inline-block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; font-size: 12px; padding-left: 24px; cursor: pointer; }
+.cb-five input[type="checkbox"] + span:before { content: ""; position: absolute; top: 4px; left: 1px; width: 16px; height: 16px; border: 1px solid #ccc; cursor: pointer; }
+.cb-five input[type="checkbox"] + span:after { content: ""; position: absolute; top: 8px; left: 5px; width: 8px; height: 4px; border: 3px solid #999; border-top: none; opacity: 0.1; border-right: none; cursor: pointer; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+.cb-five input[type="checkbox"] + span:hover:after { opacity: 0.2; border-color: #2685ee; }
+.cb-five input[type="checkbox"] + span:hover:before { border-color: rgba(38, 133, 238, 0.5); box-shadow: 0 0 2px 0 rgba(38, 133, 238, 0.3); }
+
+.cb-five input[type="checkbox"]:checked + span:after,
+.cb-five input[type="checkbox"]:checked + span:hover:after { opacity: 1; border-color: #2685ee; }
+
+.cb-five input[type="checkbox"]:disabled + span:hover:before { border-color: #ccc; box-shadow: none; }
+
+.cb-five input[type="checkbox"]:disabled + span:after,
+.cb-five input[type="checkbox"]:disabled + span:hover:after { opacity: 0.1; border-color: #999; cursor: not-allowed; }
+
+.cb-five input[type="checkbox"]:disabled + span:hover,
+.cb-five input[type="checkbox"]:disabled + span:before { cursor: not-allowed; }
+
+.cb-five input[type="checkbox"]:disabled:checked + span:after { opacity: 1; }
+
+/*单选*/
+.cb-five label { position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; height: 24px; line-height: 24px; color: #595c5f; }
+.cb-five input[type="radio"] { width: 24px; height: 24px; visibility: hidden; display: inline-block; vertical-align: middle; }
+.cb-five input[type="radio"] + span { display: inline-block; position: absolute; top: 0; right: 0; bottom: 0; left: 0; font-size: 12px; padding-left: 24px; cursor: pointer; }
+.cb-five input[type="radio"] + span:before { content: ""; position: absolute; top: 4px; left: 1px; width: 16px; height: 16px; border: 1px solid #ccc; cursor: pointer; border-radius: 50%; }
+.cb-five input[type="radio"] + span:after { content: ""; position: absolute; top: 9px; left: 6px; width: 8px; height: 8px; border-radius: 50%; background: #999; opacity: 0.1; cursor: pointer; }
+.cb-five input[type="radio"] + span:hover:after { opacity: 0.2; background: #2685ee; }
+.cb-five input[type="radio"] + span:hover:before { border-color: rgba(38, 133, 238, 0.5); box-shadow: 0 0 2px 0 rgba(38, 133, 238, 0.3); }
+
+.cb-five input[type="radio"]:checked + span:after,
+.cb-five input[type="radio"]:checked + span:hover:after { opacity: 1; background: #2685ee; }
+
+.cb-five input[type="radio"]:disabled + span:hover:before { border-color: #ccc; box-shadow: none; }
+
+.cb-five input[type="radio"]:disabled + span:after,
+.cb-five input[type="radio"]:disabled + span:hover:after { opacity: 0.1; background: #999; cursor: not-allowed; }
+
+.cb-five input[type="radio"]:disabled + span:hover,
+.cb-five input[type="radio"]:disabled + span:before { cursor: not-allowed; }
+
+.cb-five input[type="radio"]:disabled:checked + span:after { opacity: 1; }
+
+/* 复选, 开关 */
+.cb-five.cb-switch { width: 52px; height: 24px; border-radius: 20px; position: relative; margin: 4px 0; }
+.cb-five.cb-switch label { height: 24px; }
+.cb-five.cb-switch input[type="checkbox"] + span { background: #fff; border-radius: 20px; border: 1px solid #ccc; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; -o-transition: all .5s ease; -ms-transition: all .5s ease; transition: all .5s ease; }
+.cb-five.cb-switch input[type="checkbox"] + span:before { content: "ON"; position: absolute; top: 0; left: 5px; color: #fff; font-size: 14px; border: none; opacity: 0; }
+.cb-five.cb-switch input[type="checkbox"] + span:after { transform: none; border: none; opacity: 1; display: block; width: 16px; height: 16px; border-radius: 50%; position: absolute; top: 3px; left: 4px; background: #ccc; padding: 0; }
+
+.cb-five.cb-switch input[type="checkbox"] + span:hover,
+.cb-five.cb-switch input[type="checkbox"] + span:hover:after { border-color: rgba(38, 133, 238, 0.5); box-shadow: 0 0 2px 0 rgba(38, 133, 238, 0.3); }
+
+.cb-five.cb-switch input[type="checkbox"]:checked + span { background: #2685ee; }
+.cb-five.cb-switch input[type="checkbox"]:checked + span:before { opacity: 1; }
+.cb-five.cb-switch input[type="checkbox"]:checked + span:after { left: 30px; background: #fff; }
+
+.cb-five.cb-switch input[type="checkbox"]:disabled + span:hover,
+.cb-five.cb-switch input[type="checkbox"]:disabled + span:hover:after { opacity: 1; border-color: #ccc; box-shadow: none; cursor: not-allowed; }
+
+.cb-five.cb-switch input[type="checkbox"]:disabled:checked + span { background: #999; }
+
+/*只有选择框*/
+.only-select { width: 24px; height: 24px; }
+.w100 { width: 100px; }
+.fl { float: left; }

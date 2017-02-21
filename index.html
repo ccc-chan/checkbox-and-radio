@@ -1,0 +1,163 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>hcheck-3.0</title>
+
+	<link rel="stylesheet" type="text/css" href="css/hcheck-3.0.css">
+
+	<!-- 只用于演示 -->
+	<style type="text/css">
+		.box { width: 980px; margin: 0 auto; padding-bottom: 50px; font-family: 'Microsoft yahei', sans-serif; }
+		.box:first-child { margin-top: 30px; }
+		.box:last-child { padding-bottom: 150px; }
+		.box h3 { padding: 10px 0 30px; color: #555; }
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h3>复选，span 是必需D</h3>
+		<div class="cb-five">
+			<label>
+				<input type="checkbox" checked="checked">
+				<span>测试1</span>
+			</label>
+		</div>
+		<div class="cb-five">
+			<label>
+				<input type="checkbox">
+				<span>测试2</span>
+			</label>
+		</div>
+		<div class="cb-five">
+			<label>
+				<input type="checkbox" disabled="disabled">
+				<span>不可操作</span>
+			</label>
+		</div>
+		<div class="cb-five">
+			<label>
+				<input type="checkbox" disabled="disabled" checked="=checked">
+				<span>默认选中，不可操作</span>
+			</label>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3>单选没有，默认选中，不可操作的情况，如果非要，默认选中不可操作，只能全部都加disabled</h3>
+		<div class="cb-five">
+			<label>
+				<input type="radio" name="cr" checked="checked">
+				<span>测试1</span>
+			</label>
+		</div>
+		<div class="cb-five">
+			<label>
+				<input type="radio" name="cr">
+				<span>测试2</span>
+			</label>
+		</div>
+		<div class="cb-five">
+			<label>
+				<input type="radio" name="cr" disabled="disabled">
+				<span>测试3,不可操作</span>
+			</label>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3>只有选择没有文字，加only-select，但也要 span 标签</h3>
+		<div class="cb-five only-select">
+			<label>
+				<input type="radio" name="cr2" checked="checked">
+				<span></span>
+			</label>
+		</div>
+		<div class="cb-five only-select">
+			<label>
+				<input type="radio" name="cr2">
+				<span></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="box">
+		<div class="cb-five w100 fl">
+			<label>
+				<input type="checkbox" checked="checked">
+				<span></span>
+			</label>
+		</div>
+		<div class="cb-five w100 fl">
+			<label>
+				<input type="checkbox">
+				<span></span>
+			</label>
+		</div>
+		<div class="cb-five w100 fl">
+			<label>
+				<input type="radio" name="rra" checked="checked">
+				<span></span>
+			</label>
+		</div>
+		<div class="cb-five w100 fl">
+			<label>
+				<input type="radio" name="rra">
+				<span></span>
+			</label>
+		</div>
+	</div>
+
+	<div class="box">
+		<h3>开关</h3>
+		<table>
+			<tr>
+				<td width="180">开关-正常状态</td>
+				<td>
+					<div class="cb-five cb-switch">
+						<label>
+							<input type="checkbox">
+							<span></span>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>开关-正常-不可操作</td>
+				<td>
+					<div class="cb-five cb-switch">
+						<label>
+							<input type="checkbox" disabled="disabled">
+							<span></span>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>开关-开-选中</td>
+				<td>
+					<div class="cb-five cb-switch">
+						<label>
+							<input type="checkbox" checked="checked">
+							<span></span>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>开关-开-选中不可操作</td>
+				<td>
+					<div class="cb-five cb-switch">
+						<label>
+							<input type="checkbox" checked="checked" disabled="disabled">
+							<span></span>
+						</label>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
+
+
